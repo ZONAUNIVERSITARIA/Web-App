@@ -3,6 +3,12 @@
 <p> <%= @article.user.name %></p>
 <p> <%= @article.body %> </p>
 
+<p> <%= @article.get_upvotes.size %> Likes </p>
+<p> <%= @article.get_downvotes.size %> Dislikes </p>
+
+<%= link_to "Like", like_article_path(@article), method: :get %>
+<%= link_to "Dislike", dislike_article_path(@article), method: :get %>
+
 	<h2> <%= pluralize @article.comments.count, "Comentario" %></h2>
 	<% @comments.each do |comment| %>
 	<div class="comment">

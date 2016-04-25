@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'simple_form'
 gem 'devise'
 gem 'paperclip'
+gem 'acts_as_votable'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

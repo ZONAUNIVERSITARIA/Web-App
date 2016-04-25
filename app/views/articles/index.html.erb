@@ -3,4 +3,5 @@
 <div><%= link_to (image_tag article.cover.url(:thumb)), article%></div>
 <h2> <%= link_to article.title, article %> </h2>
 <p> <%= article.comments.count %> Comentarios </p>
+<p> <%= article.get_likes.size %> Like </p>
 <%end%>
