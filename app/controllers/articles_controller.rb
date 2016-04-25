@@ -46,6 +46,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def post_params
-		params.require(:article).permit(:title,:body,:visits_count)
+		params.require(:article).permit(:title,:body,:visits_count,:cover)
 	end
 end

@@ -1,5 +1,8 @@
 <%= form_for (@article) do |f| %>
 	<div class="field">
+		Portada: <%= f.file_field :cover%>
+	</div>
+	<div class="field">
 		<%= f.text_field :title, placeholder: "Título" %>
 	</div>
 	<div class="field">
