@@ -2,3 +2,13 @@
 <h1> <%= @article.title %> </h1>
 <p> <%= @article.user.name %></p>
 <p> <%= @article.body %> </p>
+
+	<h2> <%= pluralize @article.comments.count, "Comentario" %></h2>
+	<% @comments.each do |comment| %>
+	<div class="comment">
+		<p class="username"> <%= comment.user.name %></p>
+		<p class="content"> <%= comment.content %></p>
+	</div>
+	<%end%>
+
+	<%= render 'comments/form' %>
