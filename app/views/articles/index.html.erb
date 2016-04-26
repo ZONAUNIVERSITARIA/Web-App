@@ -1,7 +1,48 @@
-<h1> Nuestro blog </h1>
+<div class="contenido">
+<div class="bienvenida">
+<% if user_signed_in? %>
+	<h1> ¡Hola! <%= current_user.name %> </h1>
+	<span> Somos la comunidad perfecta para ti. </span>
+<% else %>
+	<h1> ¿Qué es lo que te inspira? </h1>
+	<span> Somos la comunidad perfecta para ti. </span>
+<%end%>	
+</div>
+<div class="index-articles top-bar" id="posts" style="background:none;">
 <% @articles.each do |article| %>
-<div><%= link_to (image_tag article.cover.url(:thumb)), article%></div>
-<h2> <%= link_to article.title, article %> </h2>
-<p> <%= article.comments.count %> Comentarios </p>
-<p> <%= article.get_likes.size %> Like </p>
+	<div class="post">
+	<div class="post_image">
+		<%= link_to (image_tag article.cover.url(:thumb)), article%>
+	</div>
+	<div class="post_content">
+		<div>
+			<h2> <%= link_to article.title, article %> </h2>
+		</div>
+		<div class="data clearfix">
+			<p><i class="fa fa-comments fa-lg" aria-hidden="true"></i> <%= article.comments.count %> Comentarios </p>
+		<p><i class="fa fa-heart fa-lg" aria-hidden="true"></i> <%= article.get_likes.size %> Like </p>
+		</div>
+	</div>
+</div>
 <%end%>
+</div>
+<div class="index-articles title-bar" id="postsmobile" style="background:none;color:black;">
+<% @articles.each do |article| %>
+	<div class="post">
+	<div class="post_image">
+		<%= link_to (image_tag article.cover.url(:thumb)), article%>
+	</div>
+	<div class="post_content">
+		<div>
+			<h2> <%= link_to article.title, article %> </h2>
+		</div>
+		<div class="data clearfix username">
+			<p><i class="fa fa-comments fa-lg"></i> <%= article.comments.count %> Comentarios </p>
+		<p><i class="fa fa-heart fa-lg"></i> <%= article.get_likes.size %> Like </p>
+		</div>
+	</div>
+</div>
+<%end%>
+</div>
+</div>
+</div>

@@ -5,8 +5,48 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
 </head>
 <body>
+	<div class="title-bar menu-logo" data-responsive-toggle="menu-ejemplo">
+  	<div class="logo">ZONA UNIVERSITARIA</div>
+	</div>
+	<div class="title-bar menu-mobile">
+		<div class="menu-centered">
+	  <ul class="menu">
+	    <li><a href="#">Inicio</a></li>
+	    <li><a href="#">Eventos</a></li>
+	    <li><a href="#">Revista</a></li>
+	    <li><button type="button" class="small hollow button">Log in</button></li>
+	  </ul>
+	</div>
+	</div>
+
+<div class="top-bar menu-desktop">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" style="background:none;">
+      <li class="menu-text">ZONA UNIVERSITARIA</li>
+      <li>
+        <%= link_to "Inicio", root_path %>
+      </li>
+      <li><%= link_to "Eventos", root_path %></li>
+      <li><%= link_to "Revista", root_path %></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+  	<% if user_signed_in? %>
+     <a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a>
+    </ul>
+	  <%= link_to "Mi perfil", edit_user_registration_path, class:"menu-right" %>
+	  <%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %>
+	 </ul>
+	<% else %> 
+    <ul class="menu" style="background:none;">
+     <a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button>
+    </ul>
+    	    <%end%>
+  </div>
+</div>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
