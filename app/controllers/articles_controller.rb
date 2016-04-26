@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
 	def show
 		@comments = Comment.where(article_id: @article)
+		@random_post = Article.where.not(id: @article).order("RANDOM()").first
 	end
 
 	def new

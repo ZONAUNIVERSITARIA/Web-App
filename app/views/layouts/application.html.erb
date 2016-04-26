@@ -14,11 +14,18 @@
 	<div class="title-bar menu-mobile">
 		<div class="menu-centered">
 	  <ul class="menu">
-	    <li><a href="#">Inicio</a></li>
-	    <li><a href="#">Eventos</a></li>
-	    <li><a href="#">Revista</a></li>
-	    <li><button type="button" class="small hollow button">Log in</button></li>
-	  </ul>
+	    <li>
+        <%= link_to "Inicio", root_path %>
+      </li>
+      <li><%= link_to "Eventos", root_path %></li>
+      <li><%= link_to "Revista", root_path %></li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %></li>
+      <li><a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a></li>
+      <% else %>
+        <li><a href="/users/sign_in" class="hollow button">Ingresar / Registrarme</a></button></li>
+      </ul>
+      <%end%>
 	</div>
 	</div>
 
