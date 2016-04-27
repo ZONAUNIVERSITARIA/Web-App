@@ -4,11 +4,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_category
 
   protected
 
   def configure_permitted_parameters
   	devise_parameter_sanitizer.for(:sign_up) << :name
   	devise_parameter_sanitizer.for(:account_update) << :name
+  end
+
+  private
+
+  def set_categories
+  	@categories = Category.all
   end
 end
