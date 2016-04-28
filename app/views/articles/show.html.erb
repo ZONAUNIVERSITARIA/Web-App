@@ -3,6 +3,9 @@
 	<h1> <%= @article.title %> </h1>
 		<div class="username">
 		<p> Compartido por: <%= @article.user.name %></p>
+		<p><% @article.categories.each do |category| %>
+			<%= link_to category.name, category, class:"tiny hollow button"%>
+		<%end%></p>
 		<p> Hace: <%= time_ago_in_words(@article.created_at) %></p>
 		</div>
 	<div class="clearfix">
@@ -51,6 +54,9 @@
 	<h1> <%= @article.title %> </h1>
 		<div class="username">
 		<p> Compartido por: <%= @article.user.name %></p>
+		<p> Categoría: <% @article.categories.each do |category| %>
+			| <%= link_to category.name, category%> |
+		<%end%></p>
 		<p> Hace: <%= time_ago_in_words(@article.created_at) %></p>
 		</div>
 	<div class="clearfix">
