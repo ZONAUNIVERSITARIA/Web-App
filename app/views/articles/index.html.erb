@@ -1,12 +1,13 @@
 <div class="contenido">
 <div class="bienvenida">
+
 <% if user_signed_in? %>
 	<h1> ¡Hola! <%= current_user.name %> </h1>
-	<span> Comparte tu inspiración ahora. </span>
-<% else %>
+	<span> Comienza tu dósis de motivación ahora. </span>
+	<% else %>
 	<h1> ¿Qué es lo que te inspira? </h1>
 	<span> Somos la comunidad perfecta para ti. </span>
-<%end%>	
+	<%end%>	
 </div>
 <div class="index-articles top-bar" id="posts" style="background:none;">
 <% @articles.each do |article| %>

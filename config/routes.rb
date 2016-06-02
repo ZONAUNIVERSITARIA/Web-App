@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   	end
   	resources :comments
   end
-
+  get '/acerca', to: "acerca#de"
+  get 'privacidad', to: "acerca#privacidad"
   root 'articles#index'
 end
