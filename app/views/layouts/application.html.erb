@@ -44,7 +44,7 @@
   	<% if user_signed_in? %>
      <a href="/articles/new" class="hollow button menu" style="background:none;">Crear inspiración</a>
     </ul>
-	  <%= link_to "Mi perfil", edit_user_registration_path, class:"menu-right" %>
+	  <%= link_to "Mi cuenta", edit_user_registration_path, class:"menu-right" %>
 	  <%= link_to "Salir", destroy_user_session_path ,class:"menu-right", method: :delete %>
 	 </ul>
 	<% else %> 
@@ -65,7 +65,7 @@
       <li><%= link_to "Sobre nosotros", '/acerca' %></li>
       <li><%= link_to "Empleo", root_path %></li>
       <li><%= link_to "Negocios", root_path %></li>
-      <li><%= link_to "Terminos y condiciones", root_path %></li>
+      <li><%= link_to "Términos de servicio", root_path %></li>
       <li><%= link_to "Privacidad", 'privacidad' %></li>
     </ul>
   </div>

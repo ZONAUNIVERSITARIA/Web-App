@@ -1,17 +1,17 @@
-<div class="contenido">
-<h2>¿Olvidaste tu contraseña?</h2>
-
+<div class="contenido-desk">
+<div class="square">
+<h2>¿Olvidaste tú contraseña?</h2><hr/>
+<p class="text-left">Por favor ingrese su dirección de correo electrónico y le enviaremos las instrucciones para restablecer su contraseña.</p>
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, label: "Correo", required: true, autofocus: true %>
+    <%= f.input :email, label: "Correo electrónico", autofocus: true ,placeholder:"nombredeusuario@dominio.com"%>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Restablecer contraseña" %>
+    <%= f.button :submit, "Restablecer mi contraseña",class:"button btn-box" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>
 </div>

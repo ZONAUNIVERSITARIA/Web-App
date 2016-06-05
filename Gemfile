@@ -14,6 +14,12 @@ gem 'paperclip'
 gem 'acts_as_votable'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#Instalando de Omniauth
+gem 'omniauth'
+
+#Iniciar con facebook
+gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'debugger'
 end

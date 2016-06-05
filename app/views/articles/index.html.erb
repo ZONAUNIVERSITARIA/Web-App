@@ -1,8 +1,6 @@
-<div class="contenido">
-<div class="bienvenida">
-
+<div class="contenido menu-centered">
 <% if user_signed_in? %>
-	<h1> ¡Hola! <%= current_user.name %> </h1>
+	<h1> ¡Hola! <%= current_user.name %></h1>
 	<span> Comienza tu dósis de motivación ahora. </span>
 	<% else %>
 	<h1> ¿Qué es lo que te inspira? </h1>
@@ -44,6 +42,5 @@
 	</div>
 </div>
 <%end%>
-</div>
 </div>
 </div>

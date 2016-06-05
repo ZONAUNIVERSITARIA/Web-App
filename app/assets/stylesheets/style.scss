@@ -11,7 +11,23 @@
     display: none;
   }
 }
-
+.text-left{
+	text-align: left;
+}
+.link-left{
+	text-align: left;
+	margin-bottom: 10px;
+}
+.btn-box{
+	font-weight: bold;
+	width: 100%;
+}
+.btn-fb{
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #3B5998;
+}
 .logo {
 	text-align: center;
 	font-weight: bold;
@@ -45,6 +61,32 @@
 	position: fixed;
 	top: 0;
 }
+.float-btm{
+	margin: auto;
+	text-align: center;
+	width: 480px;
+	margin-top: 20px;
+}
+.square{
+	border: 1px solid #CCCCCC;
+	border-radius: 10px;
+	padding: 20px;
+	width: 480px;
+	text-align: center;
+	margin: auto;
+
+	h2{
+		font-size: 25px;
+	}
+	label{
+		font-size: 15px;
+		text-align: left;
+	}
+	hint{
+		font-size: 15px;
+		text-align: left;
+	}
+}
 
 .logo-desktop{
 	text-align: center;
@@ -53,9 +95,12 @@
 	vertical-align: middle;
 }
 .contenido{
-	padding-top: 100px;
+	padding-top: 80px;
 	margin-left: 2.5%;
 	margin-right: 2.5%;
+}
+.contenido-desk{
+	padding-top: 110px;
 }
 .footer{
 	background: #019ED3;
