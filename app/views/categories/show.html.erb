@@ -1,7 +1,7 @@
 <div class="contenido">
 <p id="notice"><%= notice %></p>
 
- <div class="categories"><h1 style="color:<%= @category.color %>;text-align:center;"><%= @category.name %></h1></div>
+ <div class="categories"><h1 style="color:#969696;text-align:center;"><%= @category.name %></h1></div>
  
 <div class="index-articles top-bar" id="posts" style="background:none;">
 <% @category.articles.each do |article| %>
@@ -14,8 +14,8 @@
 				<h2> <%= link_to article.title, article %> </h2>
 			</div>
 			<div class="data clearfix">
-				<p><i class="fa fa-comments fa-lg" aria-hidden="true"></i> <%= article.comments.count %> Comentarios </p>
-			<p><i class="fa fa-heart fa-lg" aria-hidden="true"></i> <%= article.get_likes.size %> Like </p>
+				<p><i class="material-icons blue10 iconos">question_answer</i> <%= article.comments.count %> Comentarios </p>
+			<p><i class="material-icons blue10 iconos">thumb_up</i><%= article.get_likes.size %> Like </p>
 			</div>
 		</div>
 		</div>
@@ -32,8 +32,8 @@
 			<h2> <%= link_to article.title, article %> </h2>
 		</div>
 		<div class="data clearfix username">
-			<p><i class="fa fa-comments fa-lg"></i> <%= article.comments.count %> Comentarios </p>
-		<p><i class="fa fa-heart fa-lg"></i> <%= article.get_likes.size %> Like </p>
+			<p><i class="material-icons blue10 iconos">question_answer</i> <%= article.comments.count %> Comentarios </p>
+		<p><i class="material-icons blue10 iconos">thumb_up</i><%= article.get_likes.size %> Like </p>
 		</div>
 	</div>
 </div>

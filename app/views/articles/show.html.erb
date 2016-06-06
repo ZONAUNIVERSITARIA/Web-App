@@ -14,9 +14,9 @@
 		</div>
 		
 		<div class="post_data">
-			<%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get, class:"data"%>
-			<%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get, class:"data"%>
-			<div class="data"><%= pluralize @article.comments.count, "Comentario"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">thumb_up</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">thumb_down</i><%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get,class:"link-sin"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">question_answer</i><%= pluralize @article.comments.count, "Comentario"%></div>
 			<% if @article.user == current_user %>
 				<%= link_to "Editar", edit_article_path(@article) , class:"hollow button"%>
 			<%end%>
@@ -30,8 +30,8 @@
 				<div class="post_content">
 					<div class="title"><h2><%= link_to @random_post.title, article_path(@random_post) %></h2></div>
 					<div class="data clearfix">
-						<p ><i class="fa fa-comments fa-lg" aria-hidden="true"></i> <%= @random_post.comments.count %> Comentarios</p>
-						<p ><i class="fa fa-heart fa-lg" aria-hidden="true"></i> <%= @random_post.get_likes.size %> Me gusta</p>
+						<p ><i class="material-icons blue10 iconos">question_answer</i> <%= @random_post.comments.count %> Comentarios</p>
+						<p ><i class="material-icons blue10 iconos">thumb_up</i>  <%= @random_post.get_likes.size %> Me gusta</p>
 					</div>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 		<h2 class="comment_count"> <%= pluralize(@article.comments.count, "Comentario") %></h2>
 		<% @comments.each do |comment| %>
 		<div class="comment">
-			<p class="username"> <%= comment.user.name %></p>
+			<p class="username"> <%= comment.user.email %></p>
 			<p class="content"> <%= comment.content %></p>
 		</div>
 		<%end%>
@@ -62,9 +62,9 @@
 	<div class="clearfix">
 		<div class="post_image_description"><%= image_tag @article.cover.url(:medium) %>
 			<div class="post_data data-votes">
-			<%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get, class:"data"%>
-			<%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get, class:"data"%>
-			<div class="data"><%= pluralize @article.comments.count, "Comentario"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">thumb_up</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get, class:"link-sin"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">thumb_down</i><%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get, class:"link-sin"%></div>
+			<div class="data"><i class="material-icons blue10 iconos">question_answer</i><%= pluralize @article.comments.count, "Comentario"%></div>
 			<% if @article.user == current_user %>
 				<%= link_to "Editar", edit_article_path(@article) , class:"hollow button"%>
 			<%end%>
@@ -90,8 +90,8 @@
 				<div class="post_content">
 					<div class="title"><h2><%= link_to @random_post.title, article_path(@random_post) %></h2></div>
 					<div class="data clearfix">
-						<p ><i class="fa fa-comments fa-lg" aria-hidden="true"></i> <%= @random_post.comments.count %> Comentarios</p>
-						<p ><i class="fa fa-heart fa-lg" aria-hidden="true"></i> <%= @random_post.get_likes.size %> Me gusta</p>
+						<p ><i class="material-icons blue10 iconos">question_answer</i> <%= @random_post.comments.count %> Comentarios</p>
+						<p ><i class="material-icons blue10 iconos">thumb_up</i> <%= @random_post.get_likes.size %> Me gusta</p>
 					</div>
 				</div>
 			</div>

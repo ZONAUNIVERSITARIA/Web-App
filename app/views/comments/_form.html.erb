@@ -1,4 +1,4 @@
 <%= form_for ([@article, @article.comments.build]) do |f| %>
-	<div><%= f.text_area :content, placeholder: "Escribe aquí tu comentario", style:"height: 200px;" %></div>
-	<div><%= f.submit "Comentar", class: "btn be-blue expanded button" %></div>
+	<div><%= f.text_area :content, placeholder: "Para comentar ocupas estar registrado.", style:"height: 200px;" %></div>
+	<div><%= f.submit "Comentar", class: "button btn-box" %></div>
 <%end%>

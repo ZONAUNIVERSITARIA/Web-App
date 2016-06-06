@@ -20,6 +20,7 @@ gem 'omniauth'
 #Iniciar con facebook
 gem 'omniauth-facebook'
 
+
 group :development, :test do
   gem 'debugger'
 end
