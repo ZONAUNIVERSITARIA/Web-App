@@ -12,7 +12,7 @@
 			<div class="post_data">
 				<div class="data"><i class="material-icons red10 iconos">favorite</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
 				<div class="data"><i class="material-icons strike10 iconos">sentiment_dissatisfied</i><%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get,class:"link-sin"%></div>
-				<div class="data"><i class="material-icons blue10 iconos">visibility</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
+				<div class="data"><i class="material-icons blue10 iconos">visibility</i><%= pluralize(@article.visits_count, "Visita")%></div>
 				<% if @article.user == current_user %>
 					<%= link_to "Editar", edit_article_path(@article) , class:"hollow button"%>
 				<%end%>
