@@ -1,0 +1,25 @@
+<div id="post_show">
+	<div class="post_image_description big"><%= image_tag @article.cover.url(:medium) %></div>
+	<h1 class="big"><%= @article.title %></h1>
+	<div class="clearfix">
+		<div class="username">
+			<% @article.categories.each do |category| %>
+			<%= link_to category.name, category, class:"tiny hollow button"%>
+		<%end%>
+		<p>Compartido por: <%= @article.user.name %><br/>
+		Hace: <%= time_ago_in_words(@article.created_at) %></p>
+		</div>
+			<div class="post_data">
+				<div class="data"><i class="material-icons red10 iconos">favorite</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
+				<div class="data"><i class="material-icons strike10 iconos">sentiment_dissatisfied</i><%= link_to pluralize(@article.get_downvotes.size, "Strike") ,dislike_article_path(@article), method: :get,class:"link-sin"%></div>
+				<div class="data"><i class="material-icons blue10 iconos">visibility</i><%= link_to pluralize(@article.get_upvotes.size, "Me gusta") ,like_article_path(@article), method: :get,class:"link-sin"%></div>
+				<% if @article.user == current_user %>
+					<%= link_to "Editar", edit_article_path(@article) , class:"hollow button"%>
+				<%end%>
+			</div>
+	</div>	
+	<div class="description"> <%= simple_format(@article.body) %> </div>
+	<div id="comments">
+		<%= render 'disqus'%>
+	</div>
+</div>
