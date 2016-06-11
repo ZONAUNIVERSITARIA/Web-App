@@ -23,6 +23,9 @@ gem 'omniauth-facebook'
 #Instalando componente para hacer amigable la url
 gem 'friendly_id', '~> 5.1'
 
+#Instalando gema para la paginación
+gem 'will_paginate', '~> 3.1'
+
 
 group :development, :test do
   gem 'debugger'
