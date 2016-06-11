@@ -59,10 +59,10 @@ class ArticlesController < ApplicationController
 	private
 
 	def find_post
-		@article = Article.find(params[:id])
+		@article = Article.friendly.find(params[:id])
 	end
 
 	def post_params
-		params.require(:article).permit(:title,:body,:visits_count,:cover,:categories)
+		params.require(:article).permit(:title,:body,:visits_count,:cover,:categories,:slug)
 	end
 end

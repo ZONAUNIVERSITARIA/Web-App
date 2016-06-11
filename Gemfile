@@ -20,6 +20,9 @@ gem 'omniauth'
 #Iniciar con facebook
 gem 'omniauth-facebook'
 
+#Instalando componente para hacer amigable la url
+gem 'friendly_id', '~> 5.1'
+
 
 group :development, :test do
   gem 'debugger'

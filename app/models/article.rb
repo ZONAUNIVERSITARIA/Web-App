@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 	include PermissionsConcern
 	acts_as_votable
 	belongs_to :user
