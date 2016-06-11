@@ -11,7 +11,7 @@
 
   <div class="form-inputs">
   	<%= f.input :name, required: true, autofocus: true, label: "Nombre", placeholder:"Mi nombre completo"%>
-    <%= f.input :email, required: true, autofocus: true,label: "Correo electrónico",placeholder: "miusuario@dominio.com" %>
+    <%= f.input :email, required: true, autofocus: true,label: "Correo electrónico",placeholder: "miusuario@dominio.com", value: get_email_oauth %>
     <%= f.input :password,label: "Contraseña" , required: true, placeholder: ("#{@minimum_password_length} caracteres mínimo" if @minimum_password_length)%>
     <%= f.input :password_confirmation, label: "Confirmar contraseña",required: true %>
     <%= f.input :remember_me, label: "Estoy de acuerdo con los Términos de servicio" ,as: :boolean if devise_mapping.rememberable? %>

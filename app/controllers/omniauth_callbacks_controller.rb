@@ -1,7 +1,7 @@
 class OmniauthCallbacksController < ApplicationController
 	def facebook
 		auth = request.env["omniauth.auth"]
-
+		
 		data = {
 			name: auth.info.name,
 			email: auth.info.email,
