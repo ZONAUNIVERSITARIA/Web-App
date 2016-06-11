@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160611030253) do
+ActiveRecord::Schema.define(version: 20160611065241) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20160611030253) do
     t.integer  "permission_level",       default: 1
     t.string   "provider"
     t.string   "uid"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
