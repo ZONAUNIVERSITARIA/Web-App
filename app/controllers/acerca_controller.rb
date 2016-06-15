@@ -11,5 +11,8 @@ class AcercaController < ApplicationController
 
 	def normas
 	end
+
+	def empleo
+	end
 	
 end
