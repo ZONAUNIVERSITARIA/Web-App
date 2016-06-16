@@ -20,6 +20,8 @@ gem 'omniauth'
 #Iniciar con facebook
 gem 'omniauth-facebook'
 
+#Fuentes para iconos
+gem "font-awesome-rails"
 
 #Instalando componente para hacer amigable la url
 gem 'friendly_id', '~> 5.1'
