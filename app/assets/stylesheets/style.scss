@@ -22,6 +22,7 @@
 	padding-left: 40px;
 }
 
+h1{}
 .acerca{
 	font-size: 20px;
 }
@@ -475,9 +476,30 @@
 	}
 	h1 {
 		margin: 0;
-		color: #333233;
+		font-weight: bold;
 	}
-	img {
+	h2{
+		margin: 0;
+		font-weight: bold;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #333233;
+	}
+	cite{
+		padding-left: 20px;
+		font-size: 25px;
+	}
+	q{
+		padding-left: 20px;
+		padding-right: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #7FB9E5;
+		color:white;
+	}
+	img{
+		width: 300px;
+	}
+	.portada {
 		width: 100%;
 		border-radius: .3rem;
 	}
