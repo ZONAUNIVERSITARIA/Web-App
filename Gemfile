@@ -13,6 +13,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'acts_as_votable'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rails_12factor', group: :production
 
 #Instalando de Omniauth
 gem 'omniauth'
@@ -42,9 +43,7 @@ end
 group :development do
 	gem 'sqlite3'
 end
-
 group :production do
-	gem 'rails_12factor'
 	gem 'pg'
 end
 
