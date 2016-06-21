@@ -218,7 +218,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   paperclip
-  pg
+  pg (~> 0.18.4)
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
