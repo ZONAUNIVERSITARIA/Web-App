@@ -15,7 +15,8 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-  config.omniauth :facebook,"1742462592699378","07b1b5dc15f74635a3d9eab0b0531f98"
+  config.omniauth :facebook,"1742462592699378","07b1b5dc15f74635a3d9eab0b0531f98",
+  :client_options => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}
   
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
